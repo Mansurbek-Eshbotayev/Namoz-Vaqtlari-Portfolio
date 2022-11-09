@@ -25,7 +25,10 @@ let month = data.getMonth() + 1;
 // console.log(month)
 
 function deyTime(arr) {
-  fetch(`https://islomapi.uz/api/present/day?region=${arr}`)
+
+  try {
+
+    fetch(`https://islomapi.uz/api/present/day?region=${arr}`)
     .then((res) => res.json())
     .then((data) => {
       let timesNamaz = [];
@@ -76,12 +79,19 @@ function deyTime(arr) {
         elWeekList.innerHTML = watch;
       });
     });
+    
+  } catch (error) {
+    console.log("error day");
+  }
+  
 }
 
 function weekTime(arr, wek, list) {
   list.innerHTML = "";
   let tableFragment = new DocumentFragment();
-  fetch(`https://islomapi.uz/api/present/${wek}?region=${arr}`)
+  try {
+
+    fetch(`https://islomapi.uz/api/present/${wek}?region=${arr}`)
     .then((res) => res.json())
     .then((data) => {
       data.forEach((item) => {
@@ -110,12 +120,19 @@ function weekTime(arr, wek, list) {
       });
       list.appendChild(tableFragment);
     });
+    
+  } catch (error) {
+    console.log("error week");
+  }
+
 }
 
 function monthTime(arr, mon, list) {
   list.innerHTML = "";
   let tableMonFragment = new DocumentFragment();
-  fetch(`https://islomapi.uz/api/monthly?region=${arr}&month=${mon}`)
+  try {
+
+    fetch(`https://islomapi.uz/api/monthly?region=${arr}&month=${mon}`)
     .then((res) => res.json())
     .then((data) => {
       data.forEach((item) => {
@@ -144,6 +161,11 @@ function monthTime(arr, mon, list) {
       });
       list.appendChild(tableMonFragment);
     });
+    
+  } catch (error) {
+    console.log("Error Month");
+  }
+  
 }
 
 deyTime(elCountrySelect.value);
