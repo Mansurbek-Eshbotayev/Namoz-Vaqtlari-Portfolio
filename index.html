@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/clock.css">
+  <link rel="stylesheet" href="./css/main.css">
+  <title>Document</title>
+</head>
+<body>
+  
+  <header class="header  py-2">
+    <div class="container">
+      <nav class="navbar navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white">Taqvim.com</a>
+          <form class="form d-flex">
+            <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+            <select class="form-select form__town me-4" aria-label="Default select example">
+              <option disabled>Viloyatlar</option>
+              <option value="Toshkent">Toshkent</option>
+              <option value="Andijon">Andijon</option>
+              <option value="Namangan">Namangan</option>
+              <!-- <option value="Fargʻona">Fargʻona</option> -->
+              <!-- <option value="Sirdaryo">Sirdaryo</option> -->
+              <option value="Jizzax">Jizzax</option>
+              <option value="Buxoro">Buxoro</option>
+              <option value="Navoiy">Navoiy</option>
+              <!-- <option value="Qashqadaryo">Qashqadaryo</option>
+                <option value="Surxondaryo">Surxondaryo</option>
+                <option value=" Xorazim"> Xorazim</option> -->
+              </select>
+              
+              <select class="form-select form__time me-4" aria-label="Default select example">
+                <option value="today">Bugun</option>
+                <option value="week">1 Hafta</option>
+                <option value="month">1 Oy</option>
+              </select>
+              
+              <select class="form-select form__mon form__mon--on me-4" aria-label="Default select example">
+                <option value="">oylar</option>
+                <option value="1">yanvar</option>
+                <option value="2">fevral</option>
+                <option value="3">mart</option>
+                <option value="4">aprel</option>
+                <option value="5">may</option>
+                <option value="6">iyun</option>
+                <option value="7">iyul</option>
+                <option value="8">avgust</option>
+                <option value="9">sentabr</option>
+                <option value="10">oktabr</option>
+                <option value="11">noyabr</option>
+                <option value="12">dekabr</option>
+              </select>
+              <button class="btn btn-light" type="submit">Search</button>
+            </form>
+          </div>
+        </nav>
+      </div>
+    </header>
+    
+    <main class="site-main">
+      <section class="taqvim">
+        <div class="container">
+          <h1 class="h1 text-white text-center">Namoz Vaqtlari</h1>
+          <h2 class="time__country text-center text-white h1 mt-4"></h2>
+          <p class="today__texy text-white text-center mt-3 fs-5"></p>
+          <ul class="time__day list-unstyled justify-content-between mt-5">
+            <li class="time__item ">
+              <div class="time__show">
+                <h3 class="time__title text-white text-center mb-3">Bomdod</h3>
+                <div class="time__clock time__clock--one text-center fs-4 fw-bold">
+                  17:18
+                </div>
+              </div>
+            </li>
+            <li class="time__item ">
+              <div class="time__show">
+                <h3 class="time__title text-white text-center mb-3">Quyosh</h3>
+                <div class="time__clock time__clock--two text-center fs-4 fw-bold">
+                  17:18
+                </div>
+              </div>
+            </li>
+            <li class="time__item ">
+              <div class="time__show">
+                <h3 class="time__title text-white text-center mb-3">Peshin</h3>
+                <div class="time__clock time__clock--thre text-center fs-4 fw-bold">
+                  17:18
+                </div>
+              </div>
+            </li>
+            <li class="time__item ">
+              <div class="time__show">
+                <h3 class="time__title text-white text-center mb-3">Asr</h3>
+                <div class="time__clock time__clock--four text-center fs-4 fw-bold">
+                  17:18
+                </div>
+              </div>
+            </li>
+            <li class="time__item ">
+              <div class="time__show">
+                <h3 class="time__title text-white text-center mb-3">Shom</h3>
+                <div class="time__clock time__clock--five text-center fs-4 fw-bold">
+                  17:18
+                </div>
+              </div>
+            </li>
+            <li class="time__item ">
+              <div class="time__show">
+                <h3 class="time__title text-white text-center mb-3">Hufton</h3>
+                <div class="time__clock time__clock--six text-center fs-4 fw-bold">
+                  17:18
+                </div>
+              </div>
+            </li>
+          </ul>
+          
+          <div class="week__list list-unstyled">
+            <div class="info">
+              <table class="table text-white on__table">
+                <thead>
+                  <tr>
+                    <th class="set__table" scope="col">Hafta kunlari</th>
+                    <th class="set__week" scope="col">Bomdod</th>
+                    <th class="set__week" scope="col">Quyosh</th>
+                    <th class="set__week" scope="col">Peshin</th>
+                    <th class="set__week" scope="col">Asr</th>
+                    <th class="set__week" scope="col">Shom</th>
+                    <th class="set__week" scope="col">Hufton</th>
+                  </tr>
+                </thead>
+              </table>
+              <div class="info__down">
+                
+              </div>
+            </div> 
+            
+          </div>
+        </div>
+      </section>
+    </main>
+    
+    <script src="./js/clock.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+  </html>
