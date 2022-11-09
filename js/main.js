@@ -84,8 +84,8 @@ function weekTime(arr, wek, list) {
   fetch(`https://islomapi.uz/api/present/${wek}?region=${arr}`)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
       data.forEach((item) => {
+        elTimeCountry.textContent = item.region;
         let weekItem = document.createElement("div");
         weekItem.setAttribute("class", "spaces");
         let infoWrap = `
@@ -118,8 +118,8 @@ function monthTime(arr, mon, list) {
   fetch(`https://islomapi.uz/api/monthly?region=${arr}&month=${mon}`)
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
       data.forEach((item) => {
+        elTimeCountry.textContent = item.region;
         let weekItem = document.createElement("div");
         weekItem.setAttribute("class", "spaces");
         let infoWrap = `
